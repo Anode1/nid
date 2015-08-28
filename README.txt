@@ -1,13 +1,14 @@
 Some projects require anonymization of ID, the identification key (such as
 SIN, SSN, Driver License ID, Name+Birth_Date+Birth_Place, or any other natural
-or surrogate key which cannot be passed due to security reasons.
-In that case an organization, collecting statistics can still identify the
-same person even not holding private information. What is necessary is
-hashing the key and keeping the surrogate key held to identify the person.
+or surrogate key which cannot be passed due to security or privacy reasons.
+In that case an organization collecting statistics can still identify the
+same person even not holding the private information/key. What is necessary is
+hashing the key and keeping only the surrogate key for all records identification
+and linking.
 If the next time (in a different institution) the same personal information
 will be hashed using the same private keys and the same algorithm, the same 
 hashed ID will be generated, so the institutions will be able to connect the 
-records.
+records. So the same algorithm must be used (distributed) to all the institutions.
 
 Here, for demonstrating purposes, I use the code of the hash and encoder from 
 the public domain, but any other encoder (from Linux projects or commercial)
